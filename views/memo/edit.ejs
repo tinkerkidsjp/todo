@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h3><%= title %></h3>
+    <p><%= content %></p>
+    <div>
+      <form action="/memo/edit" method="post">
+        <p>メモ内容：<input type="text" name="text" value="<%= memoData.text %>"></p>
+        <input type="hidden" name="id" value="<%= memoData.id %>">
+        <p><input type="submit" value="更新"></p>
+      </form>
+    </div>
+  </body>
+</html>
